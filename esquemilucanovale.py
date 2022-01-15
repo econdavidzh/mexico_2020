@@ -71,8 +71,8 @@ st.image(mexico, use_column_width = True)
 
 # Tasas de Cambio Actuales:
 st.write(pd.DataFrame({
-    "COP/MEX" : [pesos_colombianos_por_1_mexicano],
-    "MEX/USD" : [pesos_mexicanos_por_1_dolar]
+    "COP/MEX" : [round(pesos_colombianos_por_1_mexicano, 2)],
+    "MEX/USD" : [round(pesos_mexicanos_por_1_dolar,2)]
 }), use_column_width = True)
 
 # Cambiar de USD a MEX:
