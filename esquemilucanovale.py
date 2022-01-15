@@ -1,4 +1,4 @@
-# APP #EsQueMiLucaNoVale:
+# APP #milucanovale:
 import streamlit as st
 from PIL import Image
 import pandas as pd
@@ -24,11 +24,11 @@ for line in text:
 
 # Calculando tasas de cambio MEX-COP:
 try:
-  pesos_colombianos_por_1_mexicano = round(float(lines[0].split("  ")[1].split(" ")[0]), 2)
+  pesos_colombianos_por_1_mexicano = float(lines[0].split("  ")[1].split(" ")[0])
 except:
   lines[0] = lines[0].replace(",", ".")
   pesos_colombianos_por_1_mexicano = float(lines[0].split("  ")[1].split(" ")[0])
-pesos_mexicanos_por_1_colombiano = round(1 / pesos_colombianos_por_1_mexicano, 2)
+pesos_mexicanos_por_1_colombiano = 1 / pesos_colombianos_por_1_mexicano
 
 # URL para extraer valor dolar vs peso mexicano:
 url_dolar = "https://www.cambiodolar.mx/MXN_USD"
@@ -49,11 +49,11 @@ for line in text_dolar:
 
 # Calculando tasas de cambio MEX-USD:
 try:
-  pesos_mexicanos_por_1_dolar = round(float(lines_dolar[0].split("  ")[1].split(" ")[0]), 2)
+  pesos_mexicanos_por_1_dolar = float(lines_dolar[0].split("  ")[1].split(" ")[0])
 except:
   lines_dolar[0] = lines_dolar[0].replace(",", ".")
-  pesos_mexicanos_por_1_dolar = round(float(lines_dolar[0].split("  ")[1].split(" ")[0]), 2)
-dolares_por_1_peso_mexicano = round(1 / pesos_mexicanos_por_1_dolar, 2)
+  pesos_mexicanos_por_1_dolar = float(lines_dolar[0].split("  ")[1].split(" ")[0])
+dolares_por_1_peso_mexicano = 1 / pesos_mexicanos_por_1_dolar
 
 ### --- Imágenes:
 hola_pobres = Image.open("hola_pobres.png")
@@ -71,9 +71,9 @@ st.image(mexico, use_column_width = True)
 
 # Tasas de Cambio Actuales:
 st.write(pd.DataFrame({
-    "COP/MEX" : [round(pesos_colombianos_por_1_mexicano, 2)],
-    "MEX/USD" : [round(pesos_mexicanos_por_1_dolar, 2)]
-}), use_column_width = True)
+    "COP/MEX" : [pesos_colombianos_por_1_mexicano],
+    "MEX/USD" : [pesos_mexicanos_por_1_dolar]
+}).round(2), use_column_width = True)
 
 # Cambiar de USD a MEX:
 la_reluca = st.number_input('Cuánta luca (en dólares) quieres cambiar a pesos mexicanos?')
@@ -114,3 +114,4 @@ if cuenta_dividida != 0:
             round(cuenta_dividida / 5, 2))
     st.write("David paga",
             round(cuenta_dividida / 5, 2))
+    
