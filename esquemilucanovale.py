@@ -62,6 +62,7 @@ luca = Image.open("luca.png")
 felicidad = Image.open("felicidad.png")
 eliminado = Image.open("eliminado.png")
 paila = Image.open("paila.png")
+daniel = Image.open("daniel.png")
 
 # Estructura de la APP:
 st.set_page_config(page_title = "Mi Luca No Vale")
@@ -120,6 +121,7 @@ if cuenta_dividida != 0:
     st.image(paila, use_column_width = False, width = 150)
     st.write("Daniel paga $",
             round(cuenta_dividida / 5, 2))
+    st.image(daniel, width = 250)
     st.write("David paga $",
             round(cuenta_dividida / 5, 2))
     
