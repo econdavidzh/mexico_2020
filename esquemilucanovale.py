@@ -60,8 +60,9 @@ hola_pobres = Image.open("hola_pobres.png")
 mexico = Image.open("mexico.png")
 luca = Image.open("luca.png")
 felicidad = Image.open("felicidad.png")
+mal = Image("mal.png")
 eliminado = Image.open("eliminado.png")
-cindy = Image.open("cindy.png")
+cindy = Image.open("cindy_2.png")
 paila = Image.open("paila.png")
 daniel = Image.open("daniel.png")
 david = Image.open("david.png")
@@ -96,6 +97,7 @@ if precio_en_mex != 0:
     st.write("En luca colombiana esto vale $", 
             round(precio_en_mex * pesos_colombianos_por_1_mexicano, 2), 
             "pero no te sientas pobre!")
+    st.image(mal, width = 180)
     st.write("Esto mismo en dolarucos te cuesta $",
             round(precio_en_mex / pesos_mexicanos_por_1_dolar, 2))
 
@@ -111,7 +113,7 @@ if cuenta_dividida != 0:
             "equivalente a: $",
             round((cuenta_dividida / 5) * pesos_colombianos_por_1_mexicano, 2), 
             "devaluados pesos chibchombianos.")
-    st.image(cindy, width = 120)
+    st.image(cindy_2, width = 120)
     st.write("Paula paga $", 
             round(cuenta_dividida / 5, 2),
             ". En USD serían: $",
