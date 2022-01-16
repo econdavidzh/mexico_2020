@@ -103,16 +103,23 @@ if precio_en_mex != 0:
 cuenta_dividida = st.number_input('Quieres dividir una cuenta?')
 if cuenta_dividida != 0:
     st.image(eliminado, use_column_width = False, width = 150)
-    st.write("Cindy paga", 
-            round(cuenta_dividida / 5, 2))
-    st.write("Paula paga", 
-            round(cuenta_dividida / 5, 2))
-    st.write("Kiki paga",
+    st.write("Cindy paga $", 
+            round(cuenta_dividida / 5, 2),
+            "equivalente a: $",
+            round((cuenta_dividida / 5) * pesos_colombianos_por_1_mexicano, 2), 
+            "devaluados pesos chibchombianos")
+    st.write("Paula paga $", 
+            round(cuenta_dividida / 5, 2),
+            "en USD serían: $",
+            round((cuenta_dividida / 5) * dolares_por_1_peso_mexicano, 2))
+    st.write("Kiki paga $",
             round((cuenta_dividida / 4), 2),
-            "te tocó dar la propina asignada de forma aleatoria")
+            "te tocó dar la propina asignada de forma aleatoria",
+            "en pesos son: $",
+            round((cuenta_dividida / 4) * pesos_colombianos_por_1_mexicano, 2))
     st.image(paila, use_column_width = False, width = 150)
-    st.write("Daniel paga",
+    st.write("Daniel paga $",
             round(cuenta_dividida / 5, 2))
-    st.write("David paga",
+    st.write("David paga $",
             round(cuenta_dividida / 5, 2))
     
