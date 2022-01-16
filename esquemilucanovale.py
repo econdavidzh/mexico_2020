@@ -121,7 +121,7 @@ if cuenta_dividida != 0:
     st.image(paila, use_column_width = False, width = 150)
     st.write("Daniel paga $",
             round(cuenta_dividida / 5, 2))
-    st.image(daniel, width = 250)
+    st.image(daniel, width = 300)
     st.write("David paga $",
             round(cuenta_dividida / 5, 2))
     
