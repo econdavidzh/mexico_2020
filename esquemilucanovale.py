@@ -111,7 +111,7 @@ if cuenta_dividida != 0:
             "equivalente a: $",
             round((cuenta_dividida / 5) * pesos_colombianos_por_1_mexicano, 2), 
             "devaluados pesos chibchombianos.")
-    st.image(cindy, width = 200)
+    st.image(cindy, width = 120)
     st.write("Paula paga $", 
             round(cuenta_dividida / 5, 2),
             ". En USD serían: $",
