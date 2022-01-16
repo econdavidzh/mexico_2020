@@ -74,6 +74,7 @@ st.title('Bienvenidos a #EsQueMiLucaNoVale Versión México 2022!!!')
 st.image(mexico, use_column_width = True)
 
 # Tasas de Cambio Actuales:
+st.text("Tasas de cambio para hoy:")
 st.write(pd.DataFrame({
     "COP/MEX" : [pesos_colombianos_por_1_mexicano],
     "MEX/USD" : [pesos_mexicanos_por_1_dolar]
@@ -110,27 +111,27 @@ if cuenta_dividida != 0:
     st.image(eliminado, use_column_width = False, width = 150)
     st.write("Cindy paga $", 
             round(cuenta_dividida / 5, 2),
-            "equivalente a: $",
+            "MEX equivalente a: $",
             round((cuenta_dividida / 5) * pesos_colombianos_por_1_mexicano, 2), 
             "devaluados pesos chibchombianos.")
     st.image(cindy, width = 120)
     st.write("Paula paga $", 
             round(cuenta_dividida / 5, 2),
-            ". En USD serían: $",
+            "MEX. En USD serían: $",
             round((cuenta_dividida / 5) * dolares_por_1_peso_mexicano, 2))
     st.write("Kiki paga $",
             round((cuenta_dividida / 4), 2),
-            "te tocó dar la propina asignada de forma aleatoria.",
+            "MEX. Te tocó dar la propina asignada de forma aleatoria.",
             "En pesos chibchombianos serían: $",
             round((cuenta_dividida / 4) * pesos_colombianos_por_1_mexicano, 2))
     st.image(paila, use_column_width = False, width = 150)
     st.write("Daniel paga $",
             round(cuenta_dividida / 5, 2), 
-            ". En USD serían: $",
+            "MEX. En USD serían: $",
             round((cuenta_dividida / 5) * dolares_por_1_peso_mexicano, 2))
     st.image(daniel, use_column_width = True)
     st.write("David paga $",
             round(cuenta_dividida / 5, 2),
-            "en moneda chibcha equivalente a: $",
+            "MEX. En moneda chibcha equivalente a: $",
             round((cuenta_dividida / 5) * pesos_colombianos_por_1_mexicano, 2))
     st.image(david, width = 150)
