@@ -64,7 +64,7 @@ eliminado = Image.open("eliminado.png")
 cindy = Image.open("cindy.png")
 paila = Image.open("paila.png")
 daniel = Image.open("daniel.png")
-david = Image.open("david.png)
+david = Image.open("david.png")
 
 # Estructura de la APP:
 st.set_page_config(page_title = "Mi Luca No Vale")
