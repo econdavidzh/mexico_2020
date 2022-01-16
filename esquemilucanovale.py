@@ -61,9 +61,10 @@ mexico = Image.open("mexico.png")
 luca = Image.open("luca.png")
 felicidad = Image.open("felicidad.png")
 eliminado = Image.open("eliminado.png")
+cindy = Image.open("cindy.png")
 paila = Image.open("paila.png")
 daniel = Image.open("daniel.png")
-amor = Image.open("amor.png")
+david = Image.open("david.png)
 
 # Estructura de la APP:
 st.set_page_config(page_title = "Mi Luca No Vale")
@@ -110,6 +111,7 @@ if cuenta_dividida != 0:
             "equivalente a: $",
             round((cuenta_dividida / 5) * pesos_colombianos_por_1_mexicano, 2), 
             "devaluados pesos chibchombianos.")
+    st.image(cindy, width = 150)
     st.write("Paula paga $", 
             round(cuenta_dividida / 5, 2),
             ". En USD serían: $",
@@ -121,9 +123,12 @@ if cuenta_dividida != 0:
             round((cuenta_dividida / 4) * pesos_colombianos_por_1_mexicano, 2))
     st.image(paila, use_column_width = False, width = 150)
     st.write("Daniel paga $",
-            round(cuenta_dividida / 5, 2))
+            round(cuenta_dividida / 5, 2), 
+            ". En USD serían: $",
+            round((cuenta_dividida / 5) * dolares_por_1_peso_mexicano, 2))
     st.image(daniel, use_column_width = True)
     st.write("David paga $",
             round(cuenta_dividida / 5, 2))
-    st.image(amor, width = 200)
-    
+            "en moneda chibcha equivalente a: $",
+            round((cuenta_dividida / 5) * pesos_colombianos_por_1_mexicano, 2))
+    st.image(david, width = 150)
