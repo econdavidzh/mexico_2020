@@ -110,12 +110,12 @@ if cuenta_dividida != 0:
             "devaluados pesos chibchombianos")
     st.write("Paula paga $", 
             round(cuenta_dividida / 5, 2),
-            "en USD serían: $",
+            ". En USD serían: $",
             round((cuenta_dividida / 5) * dolares_por_1_peso_mexicano, 2))
     st.write("Kiki paga $",
             round((cuenta_dividida / 4), 2),
-            "te tocó dar la propina asignada de forma aleatoria",
-            "en pesos son: $",
+            "te tocó dar la propina asignada de forma aleatoria.",
+            "En pesos serían: $",
             round((cuenta_dividida / 4) * pesos_colombianos_por_1_mexicano, 2))
     st.image(paila, use_column_width = False, width = 150)
     st.write("Daniel paga $",
