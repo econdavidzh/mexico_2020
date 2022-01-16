@@ -102,6 +102,7 @@ if precio_en_mex != 0:
 # Dividir una cuenta:
 cuenta_dividida = st.number_input('Quieres dividir una cuenta?')
 if cuenta_dividida != 0:
+    st.image(eliminado, use_column_width = False, width = 150)
     st.write("Cindy paga", 
             round(cuenta_dividida / 5, 2))
     st.write("Paula paga", 
