@@ -55,6 +55,11 @@ except:
   pesos_mexicanos_por_1_dolar = float(lines_dolar[0].split("  ")[1].split(" ")[0])
 dolares_por_1_peso_mexicano = 1 / pesos_mexicanos_por_1_dolar
 
+# fecha de última actualización
+for i in text_dolar:
+  if str(i).startswith('<div class="flex-grow-1-fix currency-updated-uptodate">') == True:
+    fecha_actualizacion = str(i).split("><")[1].split(">")[1].split("<")[0]
+
 ### --- Imágenes:
 hola_pobres = Image.open("hola_pobres.png")
 mexico = Image.open("mexico.png")
@@ -79,6 +84,7 @@ st.write(pd.DataFrame({
     "COP/MEX" : [pesos_colombianos_por_1_mexicano],
     "MEX/USD" : [pesos_mexicanos_por_1_dolar]
 }).round(2), use_column_width = True)
+st.text(fecha_actualizacion)
 
 # Cambiar de USD a MEX:
 la_reluca = st.number_input('Cuánta luca (en dólares) quieres cambiar a pesos mexicanos?')
