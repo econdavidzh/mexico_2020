@@ -112,8 +112,6 @@ st.write(pd.DataFrame({
 }).round(2), use_column_width = True)
 st.write("Última actualización:", fecha_actualizacion)
 
-st.image(luca, use_column_width = False, width = 150)
-
 # Cambiar de USD a MEX:
 la_reluca = st.number_input('Cuánta luca (en dólares) quieres cambiar a pesos mexicanos?')
 la_reluca = float(la_reluca)
@@ -134,7 +132,10 @@ if precio_en_mex != 0:
             "pero no te sientas pobre!")
     st.image(mal, width = 180)
     st.write("Esto mismo en dolarucos te cuesta $",
-            round(precio_en_mex / pesos_mexicanos_por_1_dolar, 2))
+            round(precio_en_mex / pesos_mexicanos_por_1_dolar, 2), 
+            "En Euros serían solamente $",
+            round(precio_en_mex / pesos_mexicanos_por_1_euro))
+    st.image(luca, use_column_width = False, width = 150)
 
 # Dividir una cuenta:
 cuenta_dividida = st.number_input('Quieres dividir una cuenta?')
