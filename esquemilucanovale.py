@@ -79,14 +79,12 @@ st.title('Bienvenidos a #EsQueMiLucaNoVale Versión México 2022!!!')
 st.image(mexico, use_column_width = True)
 
 # Tasas de Cambio Actuales:
-st.text("Tasas de cambio para hoy:")
+st.write("Valor de las tasas de cambio:")
 st.write(pd.DataFrame({
     "COP/MEX" : [pesos_colombianos_por_1_mexicano],
     "MEX/USD" : [pesos_mexicanos_por_1_dolar]
 }).round(2), use_column_width = True)
-st.write("fecha de actualización:", fecha_actualizacion)
-#st.text("fecha de actualización:") 
-#st.text(fecha_actualizacion)
+st.write("Última actualización:", fecha_actualizacion)
 
 # Cambiar de USD a MEX:
 la_reluca = st.number_input('Cuánta luca (en dólares) quieres cambiar a pesos mexicanos?')
