@@ -134,7 +134,7 @@ if precio_en_mex != 0:
     st.write("Esto mismo en dolarucos te cuesta $",
             round(precio_en_mex / pesos_mexicanos_por_1_dolar, 2), 
             "En Euros serían solamente $",
-            round(precio_en_mex / pesos_mexicanos_por_1_euro))
+            round(precio_en_mex / pesos_mexicanos_por_1_euro, 2))
     st.image(luca, use_column_width = False, width = 150)
 
 # Dividir una cuenta:
