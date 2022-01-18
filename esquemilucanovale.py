@@ -55,6 +55,31 @@ except:
   pesos_mexicanos_por_1_dolar = float(lines_dolar[0].split("  ")[1].split(" ")[0])
 dolares_por_1_peso_mexicano = 1 / pesos_mexicanos_por_1_dolar
 
+# URL para extraer valor euro vs peso mexicano:
+url_euro = "https://www.cambiodolar.mx/MXN_EUR"
+response_euro = requests.get(url_euro)
+
+# documento html del sitio web:
+html_doc_euro = bs4.BeautifulSoup(response_euro.text, 'html.parser')
+text_euro = html_doc_euro.find_all("div")
+
+lines_euro = []
+for line in text_euro:
+  try:
+    if line.string.startswith("1"):
+      lines_euro.append(line.string)
+      break
+  except:
+    continue
+
+try:
+  pesos_mexicanos_por_1_euro = float(lines_euro[0].split("  ")[1].split(" ")[0])
+except:
+  lines_euro[0] = lines_euro[0].replace(",", ".")
+  pesos_mexicanos_por_1_euro = float(lines_euro[0].split("  ")[1].split(" ")[0])
+
+euros_por_1_peso_mexicano = 1 / pesos_mexicanos_por_1_euro
+    
 # fecha de última actualización
 for i in text_dolar:
   if str(i).startswith('<div class="flex-grow-1-fix currency-updated-uptodate">') == True:
@@ -82,7 +107,8 @@ st.image(mexico, use_column_width = True)
 st.write("Valor de las tasas de cambio:")
 st.write(pd.DataFrame({
     "COP/MEX" : [pesos_colombianos_por_1_mexicano],
-    "MEX/USD" : [pesos_mexicanos_por_1_dolar]
+    "MEX/USD" : [pesos_mexicanos_por_1_dolar],
+    "MEX/EUR" : [pesos_mexicanos_por_1_euro]
 }).round(2), use_column_width = True)
 st.write("Última actualización:", fecha_actualizacion)
 
