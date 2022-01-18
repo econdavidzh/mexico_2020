@@ -135,7 +135,7 @@ if precio_en_mex != 0:
             round(precio_en_mex / pesos_mexicanos_por_1_dolar, 2), 
             ". Y en Euros serían solamente $",
             round(precio_en_mex / pesos_mexicanos_por_1_euro, 2),
-            ". Si te identificas con alguna de las últimas dos opciones, entonces:")
+            ". Si te identificas con alguna de estas dos opciones, entonces:")
     st.image(luca, use_column_width = False, width = 150)
 
 # Dividir una cuenta:
