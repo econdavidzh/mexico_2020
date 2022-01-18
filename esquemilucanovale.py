@@ -84,7 +84,8 @@ st.write(pd.DataFrame({
     "COP/MEX" : [pesos_colombianos_por_1_mexicano],
     "MEX/USD" : [pesos_mexicanos_por_1_dolar]
 }).round(2), use_column_width = True)
-st.text("fecha de actualización:", fecha_actualizacion)
+st.text("fecha de actualización:") 
+st.text(fecha_actualizacion)
 
 # Cambiar de USD a MEX:
 la_reluca = st.number_input('Cuánta luca (en dólares) quieres cambiar a pesos mexicanos?')
