@@ -63,6 +63,7 @@ response_euro = requests.get(url_euro)
 html_doc_euro = bs4.BeautifulSoup(response_euro.text, 'html.parser')
 text_euro = html_doc_euro.find_all("div")
 
+# Calculando tasas de cambio MEX-EUR:
 lines_euro = []
 for line in text_euro:
   try:
@@ -77,7 +78,6 @@ try:
 except:
   lines_euro[0] = lines_euro[0].replace(",", ".")
   pesos_mexicanos_por_1_euro = float(lines_euro[0].split("  ")[1].split(" ")[0])
-
 euros_por_1_peso_mexicano = 1 / pesos_mexicanos_por_1_euro
     
 # fecha de última actualización
