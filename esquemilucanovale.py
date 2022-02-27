@@ -117,7 +117,7 @@ la_reluca = st.number_input('Cuánta luca (en dólares) quieres cambiar a pesos 
 la_reluca = float(la_reluca)
 
 if la_reluca != 0:
-    st.write("Deberías recibir $", 
+    st.write("Deberías recibir ", 
             round(la_reluca * pesos_mexicanos_por_1_dolar, 2), 
             "pesos mexicanos por tu luca gringa") 
 
@@ -127,13 +127,13 @@ if la_reluca != 0:
 # Precio de MEX a COP:
 precio_en_mex = st.number_input('Cuánto cuesta esto en mi luca?')
 if precio_en_mex != 0:
-    st.write("En luca colombiana esto vale $", 
+    st.write("En luca colombiana esto vale ", 
             round(precio_en_mex * pesos_colombianos_por_1_mexicano, 2), 
             "pero no te sientas pobre!")
     st.image(mal, width = 180)
-    st.write("Esto mismo en dolarucos te cuesta $",
+    st.write("Esto mismo en dolarucos te cuesta ",
             round(precio_en_mex / pesos_mexicanos_por_1_dolar, 2), 
-            ". Y en Euros serían solamente $",
+            ". Y en Euros serían solamente ",
             round(precio_en_mex / pesos_mexicanos_por_1_euro, 2),
             ". Si te identificas con alguna de estas dos opciones, entonces:")
     st.image(luca, use_column_width = False, width = 150)
@@ -142,20 +142,20 @@ if precio_en_mex != 0:
 cuenta_dividida = st.number_input('Quieres dividir una cuenta?')
 if cuenta_dividida != 0:
     st.image(eliminado, use_column_width = False, width = 150)
-    st.write("Cindy paga $", 
+    st.write("Cindy paga ", 
             round(cuenta_dividida / 5, 2),
-            "MEX equivalente a: $",
+            "MEX equivalente a: ",
             round((cuenta_dividida / 5) * pesos_colombianos_por_1_mexicano, 2), 
             "devaluados pesos chibchombianos.")
     st.image(cindy, width = 120)
-    st.write("Paula paga $", 
+    st.write("Paula paga ", 
             round(cuenta_dividida / 5, 2),
-            "MEX. En USD serían: $",
+            "MEX. En USD serían: ",
             round((cuenta_dividida / 5) * dolares_por_1_peso_mexicano, 2))
-    st.write("Kiki paga $",
+    st.write("Kiki paga ",
             round((cuenta_dividida / 4), 2),
             "MEX. Te tocó dar la propina asignada de forma aleatoria.",
-            "En pesos chibchombianos serían: $ ",
+            "En pesos chibchombianos serían: ",
             round((cuenta_dividida / 4) * pesos_colombianos_por_1_mexicano, 2))
     st.image(paila, use_column_width = False, width = 150)
     st.write("Daniel paga",
