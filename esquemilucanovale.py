@@ -155,15 +155,15 @@ if cuenta_dividida != 0:
     st.write("Kiki paga $",
             round((cuenta_dividida / 4), 2),
             "MEX. Te tocó dar la propina asignada de forma aleatoria.",
-            "En pesos chibchombianos serían: $",
+            "En pesos chibchombianos serían: $ ",
             round((cuenta_dividida / 4) * pesos_colombianos_por_1_mexicano, 2))
     st.image(paila, use_column_width = False, width = 150)
-    st.write("Daniel paga $",
+    st.write("Daniel paga",
             round(cuenta_dividida / 5, 2), 
-            "MEX. En USD serían: $",
+            "MEX. En USD serían:",
             round((cuenta_dividida / 5) * dolares_por_1_peso_mexicano, 2))
     st.image(daniel, use_column_width = True)
-    st.write("David paga $",
+    st.write("David paga",
             round(cuenta_dividida / 5, 2),
             "MEX. En moneda chibcha equivalente a: $",
             round((cuenta_dividida / 5) * pesos_colombianos_por_1_mexicano, 2))
