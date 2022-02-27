@@ -165,6 +165,6 @@ if cuenta_dividida != 0:
     st.image(daniel, use_column_width = True)
     st.write("David paga",
             round(cuenta_dividida / 5, 2),
-            "MEX. En moneda chibcha equivalente a: $",
+            "MEX. En moneda chibcha equivalente a: ",
             round((cuenta_dividida / 5) * pesos_colombianos_por_1_mexicano, 2))
     st.image(david, width = 150)
