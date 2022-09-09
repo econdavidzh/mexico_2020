@@ -1,4 +1,4 @@
-# mexico_2022
+# mexico_2022: Es que mi luca no vale - my money is worthless
 
 This is an app built just for fun.
 
